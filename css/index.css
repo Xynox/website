@@ -1,0 +1,18 @@
+.navigatorTop{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+}
+
+.navigatorTop a{
+    margin: 2%;
+}
+
+.navigatorTop img{
+    display: flex;
+    height: 50px;
+    gap: 100px;
+}
