@@ -1,3 +1,19 @@
+html::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+body{
+    background-color: rgb(44, 44, 44);
+    color: white;
+    
+}
+
 .namePresentation{
     display: flex;
     text-align: center;
@@ -24,6 +40,10 @@
     height: 50px;
     text-align: center;
     line-height: 50px;
+}
+
+.navigatorTop a:visited{
+    color: white;
 }
 
 .topImg{
