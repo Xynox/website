@@ -1,3 +1,14 @@
+.namePresentation{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
+    font-size: 78pt;
+    margin-bottom: 30%;
+}
+
 .navigatorTop{
     display: flex;
     margin: auto;
