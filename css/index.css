@@ -31,7 +31,7 @@ body{
     flex-direction: row;
     height: 50px;
     align-items: center;
-    gap: 5%;
+    justify-content: center;
 }
 
 .navigatorTop a{
@@ -45,10 +45,30 @@ body{
     color: white;
 }
 
-.topImg{
+.navigatorTop .topButton{
+    margin: 2%;
+    width: 100px;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navigatorTop .topButton:hover{
+    background-color: rgb(185, 185, 185);
+    color: black;
+}
+
+.navigatorTop .topImg{
     display: flex;
     height: 50px;
-    margin: 0%;
+    margin-right: auto;
+}
+
+.navigatorTop .projects{
+    margin-right: auto + 36px;
 }
 
 .aboutMe{
