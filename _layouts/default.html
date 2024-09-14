@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="css\index.css">
+</head>
+<body>
+    <nav class="navigatorTop navTopGrid">
+        <a href="./index.html" class="topImg"><img src="img\pb xynox.png" alt="logo"></a>
+        <div>
+            <button onclick="window.location.href='./html/about/about.html';" type="button" class="topButton navbarFlex">About Me</button>
+            <button onclick="window.location.href='./html/about/about.html';" type="button" class="topButton navbarFlex">Contact</button>
+            <button onclick="window.location.href='./html/blog/blog.html';" type="button" class="topButton navbarFlex">Blog</button>
+            <button onclick="window.location.href='./html/about/about.html';" type="button" class="projects topButton navbarFlex">Projects</button>
+        </div>
+
+        <div class="emptyContainerNavbar">
+
+        </div>
+        
+    </nav>
+  
+    {{ content }}
+
+</body>
+</html>
