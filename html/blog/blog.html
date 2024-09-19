@@ -1,0 +1,47 @@
+---
+layout: default
+title: Joel Wittke - Blog
+---
+
+<head>
+  <link rel="stylesheet" href="/css/blog/blog.css">
+</head>
+
+
+<div class="titleBlog">
+  <p><strong>All Blogs</strong></p>
+</div>
+
+<div class="blogExplanation">
+  <p>Welcome to my blog! This is where I post my blogposts. My blog contains following content:</p>
+</div>
+
+<div class="blogContents blogExplanation">
+
+  <ul>
+    <li>Announcments for new projects I'm working on</li>
+    <li>All news regarding my existing projects</li>
+    <li>Problems regarding my projects and how I solved them</li>
+    <li>Any other news I might like to share</li>
+  </ul>
+
+</div>
+
+
+<hr style="width: 50%;">
+
+<div class="blogList">
+  <ul style="list-style-type: none;">
+    {% for post in site.posts %}
+      <li>
+        <h2><a href="{{ post.url }}" style="text-align: center; display: flex; justify-content: center; font-style: italic;">{{ post.title }}</a></h2>
+        <h4><p style="text-align: center; display: flex; justify-content: center; font-style: italic;">({{ post.date | date_to_long_string}})</p></h4>
+        <br>
+        {{ post.excerpt }}
+        <br>
+        <hr style="width: auto;">
+        <br>
+      </li>
+    {% endfor %}
+</ul>
+</div>

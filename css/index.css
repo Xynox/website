@@ -5,11 +5,11 @@ html::-webkit-scrollbar{
 html{
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: rgb(44, 44, 44);
+    color: white;
 }
 
 body{
-    background-color: rgb(44, 44, 44);
-    color: white;
     margin: 0%;
     
 }
