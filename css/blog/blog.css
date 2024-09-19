@@ -1,9 +1,36 @@
-ul{
+.blogList{
     color: white;
     display: flex;
     justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-ul a:visited{
+.blogList a:visited{
     color: white;
+    list-style-type: inherit;
+    padding: inherit;
+    margin: inherit;
+}
+
+.titleBlog{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 48pt;
+}
+
+.blogExplanation{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogContents{
+    text-align: left;
 }

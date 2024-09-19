@@ -7,7 +7,29 @@ title: Joel Wittke - Blog
   <link rel="stylesheet" href="/css/blog/blog.css">
 </head>
 
-<ul>
+
+<div class="titleBlog">
+  <p><strong>All Blogs</strong></p>
+</div>
+
+<div class="blogExplanation">
+  <p>Welcome to my blog! This is where I post my blogposts. My blog contains following content:</p>
+</div>
+
+<div class="blogContents blogExplanation">
+
+  <ul>
+    <li>Announcments for new projects I'm working on</li>
+    <li>All news regarding my existing projects</li>
+    <li>Problems regarding my projects and how I solved them</li>
+    <li>Any other news I might like to share</li>
+  </ul>
+
+</div>
+
+<hr>
+<div class="blogList">
+  <ul>
     {% for post in site.posts %}
       <li>
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -15,3 +37,4 @@ title: Joel Wittke - Blog
       </li>
     {% endfor %}
 </ul>
+</div>
