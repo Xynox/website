@@ -1,0 +1,9 @@
+ul{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+ul a:visited{
+    color: white;
+}
