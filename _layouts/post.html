@@ -2,6 +2,16 @@
 layout: default
 ---
 
+<head>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+
 <div class="content">
+
+    <p class="pageTitle">{{page.title}}</p>
+    <div class="dateAuthor pageTitle">
+        <p>Published on {{page.date | date_to_long_string}} &bull; By {{page.author}}</p>
+    </div>
+
     {{ content }}
 </div>
