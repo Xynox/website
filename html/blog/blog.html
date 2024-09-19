@@ -27,13 +27,20 @@ title: Joel Wittke - Blog
 
 </div>
 
-<hr>
+
+<hr style="width: 50%;">
+
 <div class="blogList">
-  <ul>
+  <ul style="list-style-type: none;">
     {% for post in site.posts %}
       <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ post.url }}" style="text-align: center; display: flex; justify-content: center; font-style: italic;">{{ post.title }}</a></h2>
+        <h4><p style="text-align: center; display: flex; justify-content: center; font-style: italic;">({{ post.date | date_to_long_string}})</p></h4>
+        <br>
         {{ post.excerpt }}
+        <br>
+        <hr style="width: auto;">
+        <br>
       </li>
     {% endfor %}
 </ul>

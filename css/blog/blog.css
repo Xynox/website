@@ -33,4 +33,5 @@
 
 .blogContents{
     text-align: left;
+    flex-direction: column;
 }
