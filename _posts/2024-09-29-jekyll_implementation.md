@@ -88,10 +88,8 @@ Quickly pushed this into my main branch, waited it to (hopefully) deploy...
 ... And it deployed... and it was working! I was so relieved, the Navbar was working. Now I just needed to implement some quick fixes to the remaining filepaths and after 10 minutes I finally fixed everything and my locally served Jekyll sites were looking the same on my "real" online presence!
 
 
+
 # TLDR
 
-Local filepaths were not working in my Github Deployment, needed to implement parameters into _config.yml and change every line of code into 
-```
-href="{{'linktofile' | relative_url}}"
-```
+Local filepaths were not working in my Github Deployment, needed to implement parameters into _config.yml and change every line of code into relative file paths with curly braces and comment that it's a relative filepath
 
