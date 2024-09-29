@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ root_url }}/css/index.css">
+    <link rel="stylesheet" href="{{'/css/index.css' | relative_url }}">
+    <link rel="stylesheet" href="{{'/css/post.css' | relative_url }}">
 </head>
 <body>
     <nav class="navigatorTop navTopGrid">
-        <a href="{{ root_url }}/index.html" class="topImg"><img src="{{ root_url }}/img/pb xynox.png" alt="logo"></a>
+        <a href="{{'/index.html' | relative_url }}" class="topImg"><img src="{{'/img/pb xynox.png' | relative_url }}" alt="logo"></a>
         <div>
-            <button onclick="window.location.href='/html/about/about.html';" type="button" class="topButton navbarFlex">About Me</button>
-            <button onclick="window.location.href='/html/about/about.html';" type="button" class="topButton navbarFlex">Contact</button>
-            <button onclick="window.location.href='/html/blog/blog.html';" type="button" class="topButton navbarFlex">Blog</button>
-            <button onclick="window.location.href='/html/about/about.html';" type="button" class="projects topButton navbarFlex">Projects</button>
+            <button onclick="window.location.href='{{/html/about/about.html | relative_url }}';" type="button" class="topButton navbarFlex">About Me</button>
+            <button onclick="window.location.href='{{/html/about/about.html | relative_url }}';" type="button" class="topButton navbarFlex">Contact</button>
+            <button onclick="window.location.href='{{/html/about/blog.html | relative_url }}';" type="button" class="topButton navbarFlex">Blog</button>
+            <button onclick="window.location.href='{{/html/about/about.html | relative_url }}';" type="button" class="projects topButton navbarFlex">Projects</button>
         </div>
 
         <div class="emptyContainerNavbar">

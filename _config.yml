@@ -1,5 +1,4 @@
 excerpt_separator: "<!--preview-->"
 
-source: "/website"
 baseurl: "/website"
 url: "https://xynox.github.io"
