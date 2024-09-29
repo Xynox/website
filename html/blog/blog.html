@@ -31,7 +31,7 @@ title: Joel Wittke - Blog
   <ul style="list-style-type: none;">
     {% for post in site.posts %}
       <li>
-        <h2><a href="{{ baseurl }}{{ post.url }}" style="text-align: center; display: flex; justify-content: center; font-style: italic;">{{ post.title }}</a></h2>
+        <h2><a href="{{ post.url | relative_url }}" style="text-align: center; display: flex; justify-content: center; font-style: italic;">{{ post.title }}</a></h2>
         <h4><p style="text-align: center; display: flex; justify-content: center; font-style: italic;">({{ post.date | date_to_long_string}})</p></h4>
         <br>
         {{ post.excerpt }}
