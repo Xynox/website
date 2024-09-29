@@ -7,7 +7,7 @@
     margin: 0;
 }
 
-.blogList a:visited{
+h2 a:visited{
     color: white;
     list-style-type: inherit;
     padding: inherit;
