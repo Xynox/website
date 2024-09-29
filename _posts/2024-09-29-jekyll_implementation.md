@@ -5,6 +5,7 @@ author: "Joel Wittke"
 ---
 
 I've faced multiple issues with my implementation of Jekyll into my website.
+
 This blogpost looks into my solutions of those problems, more specifically into relative file paths and hosting onto Github Pages.
 <!--preview-->
 
