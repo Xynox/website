@@ -4,40 +4,36 @@ title: "Implementation of Jekyll into my Website"
 author: "Joel Wittke"
 ---
 
-I've faced multiple issues with my implementation of Jekyll into my website.
-
-This blogpost looks into my solutions of those problems, more specifically into relative file paths and hosting onto Github Pages.
+In this post, I'll share how I solved issues when implementing Jekyll on my website, specifically around handling relative file paths and hosting on Github Pages (GHP).
 <!--preview-->
 
-# Initial problems
+# Initial Problems
 
-Even before starting to implement Jekyll I've hosted (although only for testing purposes) my website on Github Pages (I'm lazy so I'm going to refer to it as GHP) which quite a big setback.
-The whole Jekyll documentation including the quick start guide documents the whole process when starting your whole infrastructure on Jekyll. But I wanted to only implement it in certain parts of my website. It also didn't really provide any meaningful documentation when coming to GHP, so I kinda needed to figure it all out by myself.
+Before integrating Jekyll, I had my website hosted on GHP (I'm lazy so I'm going to refer to it as GHP) for testing. Starting with GHP was a bit of a setback since the Jekyll documentation assumes you're starting from scratch with Jekyll and doesn't provide much guidance for GHP. I wanted to integrate Jekyll into specific parts of my site rather than converting everything to Jekyll, so I had to figure out a lot on my own.
 
-# First implementation locally
+# First Local implementation
 
-I tried it out first - not with the quick start docs, but the 10 or whatever steps documentation - and it kind of worked out of the box! I quickly tried out the template function and was really impressed: I don't need to implement the whole Navbar etc. onto my pages! But I specifically wanted Jekyll to host my blog sites (like the one you're reading right now!) because GHP doesn't support custom backends (custom CMS) as I would have chosen otherwise. 
+I initially skipped the quick start guide and went for the ["10 steps" documentation](https://jekyllrb.com/docs/step-by-step). Things mostly worked out of the box! I was impressed with Jekyll's templating, as it allowed me to manage navigation components like the navbar across pages without duplicating code. My goal was to use Jekyll to host my blog pages (like this one!), as GHP doesn’t support custom backends.
 
-# Github Pages did not like me
+# Github Pages Deployment Challenges
 
-As I pushed my implementation into my main branch (TIL that you should never delete your branches, there seems to be a stale attribute) and began to configure my deployment, I just winged it at first with the standard implementation from GHP with the following result:
+After pushing my changes to the main branch (note to self: don’t delete branches, they are indeed gone forever), I set up the deployment using GHP’s standard process. I immediately ran into this error:
 
 ```
 Error: The process '/opt/hostedtoolcache/Ruby/3.1.4/x64/bin/bundle' failed with exit code 5
 ```
 
-Well thanks: I didn't have a clue what the problem was supposed to be, this didn't tell me anything!
-Some updates later I didn't even get into the "Setup Ruby" part, I was stuck at "Set up job":
+That was cryptic. I had no idea what went wrong. After further attempts, I hit another roadblock:
 
 ```
 Error: An action could not be found at the URI 'https://api.github.com/repos/ruby/setup-ruby/tarball/59444476bbe9e789fc777d8fb4dd456bc057604f'
 ```
 
-Well, that's a new error I did not have any solution for!
+Well, that was a new error I did not have any solution for!
 
-# Deploying to Github Pages (but this time successfully)
+# Deploying Successfully to Github Pages
 
-Well, turns out, there is a (unbelievably well for my previous experience) [documentation](https://jekyllrb.com/docs/continuous-integration/github-actions/) for the deployment to GHP! My main problem was that I needed to configure the GH Actions jekyll.yml with:
+Eventually, I found a surprisingly detailed [documentation](https://jekyllrb.com/docs/continuous-integration/github-actions/) on deployment to GHP with GH Actions! My main problem was that I needed to configure the GH Actions jekyll.yml with:
 
 ```yml
 jobs:
@@ -51,21 +47,20 @@ jobs:
                 ruby-version: '3.3.4'
                 bundler-cache: true
             #[...]
-#[..]
+#[...]
 ```
 
-Aaaand... Tada, my website was up and running (again)!
+Finally, my website was up and running (again)!
 
-# The problems do not end here
+# The Filepath Problem
 
 Well, my index.html was showing. But I clicked on any other pages... **404**, Page not found.
 
-Yay, another problem! After abusing the DevTools and figuring out that the filepaths are messed up, I began to poke into different solutions that sounded right to me:
-Adding onto all different relative links a dot in front to try and put him into the right folder structure, but no this did not solve anything!
+Yay, another problem! After debugging with the DevTools and figuring out that the filepaths were messed up, I tried adding dots to relative links to fix the folder structure, but that didn’t help.
 
-## Github Pages did hate me suddenly
+## Configuring `_config.yml` for GitHub Pages
 
-I figured out pretty soon that I needed to configure my _config.yml for the usage of GH Actions/GHP. And some quick additions later (according to my research in the internet) I added besides the url and baseurl parameters the source param. But well...
+I figured out pretty soon that I needed to configure my `_config.yml` for the usage of GH Actions/GHP. I added besides the `url`, `baseurl` and the `source` parameters. But well...
 
 ```
 /opt/hostedtoolcache/Ruby/3.3.4/x64/lib/ruby/3.3.0/fileutils.rb:402:in `mkdir': Permission denied @ dir_s_mkdir - /.jekyll-cache (Errno::EACCES)
@@ -73,24 +68,23 @@ I figured out pretty soon that I needed to configure my _config.yml for the usag
 Error: Process completed with exit code 1.
 ```
 
-Great!
+New error!
 
-## Getting my Website back up
+## Finding a Fix
 
-After this devastating error I needed some time to focus on other things and my website was on a old deployment, still with functioning links to the blog side coming from the index.html but not in the other directions and completely missing css on my blog overview. 
+I took a break and let the website stay on an old deployment.
 
-But after some time I was motivated again and began working on a fix: Old source param out, this had to be the issue and quite to my advantage I just asked Copilot:
-And the AI showed me: I needed to implement into the links a Jekyll-friendly code with the note for Jekyll that it's a relative url!
+But after some time I was motivated again and began working on a fix: Old source param out, this had to be the issue and with some help from AI I figured out that I needed to implement a Jekyll-friendly code into the links with the note for Jekyll that it's a relative url!
 
-Quickly pushed this into my main branch, waited it to (hopefully) deploy...
+Quickly pushed this into my main branch, waited for it to (hopefully) deploy...
 
-# Finally fixed
+# Result
 
-... And it deployed... and it was working! I was so relieved, the Navbar was working. Now I just needed to implement some quick fixes to the remaining filepaths and after 10 minutes I finally fixed everything and my locally served Jekyll sites were looking the same on my "real" online presence!
-
+And it deployed and it was in a working state! I was so relieved, the Navbar was working. Now I just needed to implement some quick fixes to the remaining filepaths and after 10 minutes I finally fixed everything.
 
 
-# TLDR
 
-Local filepaths were not working in my Github Deployment, needed to implement parameters into _config.yml and change every line of code into relative file paths with curly braces and comment that it's a relative filepath
+# TL;DR
+
+I had issues with local file paths not working on Github Pages. I resolved this by configuring `_config.yml` and modifying links to use Jekyll’s relative file paths.
 
