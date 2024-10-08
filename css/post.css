@@ -16,3 +16,11 @@
     font-size: smaller;
     font-weight: normal;
 }
+
+a{
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
