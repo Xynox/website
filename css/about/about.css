@@ -81,3 +81,23 @@
     grid-column: 3;
     grid-row: 2;
 }
+
+button.bottomGridAbM-item{
+    margin: inherit;
+    height: 35px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    text-align: center;
+    transition: 0.2s ease;
+    font-size: large;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.bottomGridAbM-item:hover{
+    background-color: rgb(185, 185, 185);
+    color: black;
+}
