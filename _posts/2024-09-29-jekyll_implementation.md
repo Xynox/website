@@ -11,7 +11,7 @@ In this post, I'll share how I solved issues when implementing Jekyll on my webs
 
 Before integrating Jekyll, I had my website hosted on GHP (I'm lazy so I'm going to refer to it as GHP) for testing. Starting with GHP was a bit of a setback since the Jekyll documentation assumes you're starting from scratch with Jekyll and doesn't provide much guidance for GHP. I wanted to integrate Jekyll into specific parts of my site rather than converting everything to Jekyll, so I had to figure out a lot on my own.
 
-# First Local implementation
+# First Local Implementation
 
 I initially skipped the quick start guide and went for the ["10 steps" documentation](https://jekyllrb.com/docs/step-by-step). Things mostly worked out of the box! I was impressed with Jekyll's templating, as it allowed me to manage navigation components like the navbar across pages without duplicating code. My goal was to use Jekyll to host my blog pages (like this one!), as GHP doesn’t support custom backends.
 
