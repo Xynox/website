@@ -17,7 +17,7 @@ I initially skipped the quick start guide and went for the ["10 steps" documenta
 
 # Github Pages Deployment Challenges
 
-After pushing my changes to the main branch (note to self: don’t delete branches, they are indeed gone forever), I set up the deployment using GHP’s standard process. I immediately ran into this error:
+After pushing my changes to the main branch (note to self: don’t delete branches, they are indeed gone forever (note-note to self: you can see the commits in the PRs afterwards ^^ so nothing to worry about :D )), I set up the deployment using GHP’s standard process. I immediately ran into this error:
 
 ```
 Error: The process '/opt/hostedtoolcache/Ruby/3.1.4/x64/bin/bundle' failed with exit code 5
