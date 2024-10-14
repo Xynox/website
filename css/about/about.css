@@ -17,3 +17,24 @@
     justify-content: center;
     align-items: center;
 }
+
+.tableAbM{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.tableCV {
+    border: hidden;
+    border-collapse: collapse;
+}
+
+.tableCV th,td{
+    padding: 5px;
+    text-align: center;
+}
+
+.tableCV th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
