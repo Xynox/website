@@ -17,6 +17,8 @@
     font-weight: normal;
 }
 
+/* TODO: There is a high chance that this will be deprecated with more files --> overwritten by this "a"-definition */
+
 a{
     color: white;
 }
