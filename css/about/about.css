@@ -1,0 +1,104 @@
+.topAbM{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleAbM{
+    display: flex;
+    justify-content: center;
+    font-size: 32pt;
+    font-weight: bold;
+}
+
+.introAbM{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableAbM{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.tableCV {
+    border: hidden;
+    border-collapse: collapse;
+}
+
+.tableCV th,td{
+    padding: 5px;
+    text-align: center;
+}
+
+.tableCV th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+.bottomGridAbM-container{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 50px;
+    row-gap: 10px;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.bottomGridAbM-item{
+    display: grid;
+    align-items: center;
+}
+
+.item1{
+    grid-column: 1;
+    grid-row: 1;
+}
+.item2{
+    grid-column: 1;
+    grid-row: 2;
+}
+.item3{
+    grid-column: 2;
+    grid-row: 1;
+}
+.item4{
+    grid-column: 2;
+    grid-row: 2;
+}
+.item5{
+    grid-column: 3;
+    grid-row: 1;
+}
+.item6{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+button.bottomGridAbM-item{
+    margin: inherit;
+    height: 35px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    text-align: center;
+    transition: 0.2s ease;
+    font-size: large;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.bottomGridAbM-item:hover{
+    background-color: rgb(185, 185, 185);
+    color: black;
+}

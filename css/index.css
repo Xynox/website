@@ -63,6 +63,7 @@ body{
     border: none;
     border-radius: 8px;
     transition: 0.2s ease;
+    cursor: pointer;
 }
 
 .navigatorTop .topButton:hover{
@@ -104,6 +105,7 @@ body{
     font-size: large;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .aboutMe button:hover{
