@@ -45,7 +45,7 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     column-gap: 50px;
     row-gap: 10px;
