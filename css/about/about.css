@@ -37,6 +37,7 @@
 .tableCV th{
     padding-top: 20px;
     padding-bottom: 20px;
+    text-decoration: underline;
 }
 
 .bottomGridAbM-container{
