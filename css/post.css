@@ -2,6 +2,8 @@
     margin-left: 25rem;
     margin-right: 25rem;
     margin-top: 4rem;
+    font-family: 'Merriweather';
+    font-size: smaller;
 }
 
 .pageTitle{
@@ -10,6 +12,7 @@
     font-size: 32pt;
     font-weight: bold;
     margin: 0;
+    font-family: 'Montserrat';
 }
 
 .dateAuthor{
