@@ -76,7 +76,7 @@ body{
 .navigatorTop .topImg{
     display: flex;
     height: 50px;
-    margin-right: auto;
+    width: 50px;
 }
 
 .navigatorTop .projects{
