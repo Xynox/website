@@ -13,7 +13,7 @@ Before integrating Jekyll, I had my website hosted on GHP (I'm lazy so I'm going
 
 # First Local Implementation
 
-I initially skipped the quick start guide and went for the ["10 steps" documentation](https://jekyllrb.com/docs/step-by-step). Things mostly worked out of the box! I was impressed with Jekyll's templating, as it allowed me to manage navigation components like the navbar across pages without duplicating code. My goal was to use Jekyll to host my blog pages (like this one!), as GHP doesn’t support custom backends.
+I initially skipped the quick start guide and went for the ["10 steps" documentation](https://jekyllrb.com/docs/step-by-step){:target="_blank"}. Things mostly worked out of the box! I was impressed with Jekyll's templating, as it allowed me to manage navigation components like the navbar across pages without duplicating code. My goal was to use Jekyll to host my blog pages (like this one!), as GHP doesn’t support custom backends.
 
 # Github Pages Deployment Challenges
 
@@ -33,7 +33,7 @@ Well, that was a new error I did not have any solution for!
 
 # Deploying Successfully to Github Pages
 
-Eventually, I found a surprisingly detailed [documentation](https://jekyllrb.com/docs/continuous-integration/github-actions/) on deployment to GHP with GH Actions! My main problem was that I needed to configure the GH Actions jekyll.yml with:
+Eventually, I found a surprisingly detailed [documentation](https://jekyllrb.com/docs/continuous-integration/github-actions/){:target="_blank"} on deployment to GHP with GH Actions! My main problem was that I needed to configure the GH Actions jekyll.yml with:
 
 ```yml
 jobs:

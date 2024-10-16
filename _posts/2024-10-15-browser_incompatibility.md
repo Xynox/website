@@ -36,7 +36,7 @@ Neither layout was satisfactory.
 
 #### Initial Solution
 
-After some trial and error, I found inspiration on the [Jägermeister International website](https://www.jagermeister.com/), which had a well-aligned navbar. By inspecting their DevTools, I noticed they used a three-column grid instead of a flexbox layout. I implemented a similar grid, which added proper spacing between elements.
+After some trial and error, I found inspiration on the [Jägermeister International website](https://www.jagermeister.com/){:target="_blank"}, which had a well-aligned navbar. By inspecting their DevTools, I noticed they used a three-column grid instead of a flexbox layout. I implemented a similar grid, which added proper spacing between elements.
 
 The key fix was setting `margin-right: auto;` on the logo. While I didn’t fully understand *why* this worked, it centered the buttons perfectly. Since it worked, I didn't look further into it.
 
@@ -56,6 +56,6 @@ I learned that browsers use different default fonts, which caused font size and 
 
 ## Want to Help?
 
-I’m still not fully satisfied with the heading font. If you have any font suggestions, check the [issue tracker](https://github.com/Xynox/website/issues) to see if it’s already been requested. Or, feel free to [open a new issue](https://github.com/Xynox/website/issues/new/choose) with your ideas!
+I’m still not fully satisfied with the heading font. If you have any font suggestions, check the [issue tracker](https://github.com/Xynox/website/issues){:target="_blank"} to see if it’s already been requested. Or, feel free to [open a new issue](https://github.com/Xynox/website/issues/new/choose){:target="_blank"} with your ideas!
 
 I’m always open to feedback, new feature requests, or bug reports. Thanks for reading!
