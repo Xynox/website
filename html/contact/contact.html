@@ -20,5 +20,40 @@ title: Joel Wittke - Contact
 </div>
 
 <div class="contactMore">
-    <a href="">Click here to open up a consize list of all my aliases on common pages I use</a>
+    <button class="contactMoreLink">Click here to open up a consize list of all my aliases on common pages I use</button>
 </div>
+
+<div class="contactPopup">
+
+    <div class="popupContent">
+        <div class="popupHeader">
+            <span class="popupClose griditem1">&times;</span>
+            <h2 class="item2 griditem2">Other socials</h2>
+        </div>
+        <div class="popupBody">
+            <p>test</p>
+            <p>test2</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var popup = document.getElementsByClassName("contactPopup")[0];
+    var link = document.getElementsByClassName("contactMoreLink")[0];
+    var popupClose = document.getElementsByClassName("popupClose")[0];
+    
+    link.onclick = function() {
+        popup.style.display = "block";
+    }
+    
+    popupClose.onclick = function() {
+        popup.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == popup){
+            popup.style.display = "none";
+        }
+    }
+</script>
