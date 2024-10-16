@@ -9,7 +9,7 @@ In this post, I'll share how I solved various issues that arose when viewing my 
 
 ## Background
 
-While designing my pages—especially the blog overview page—I noticed an issue: everything below the last box element would disappear into a "void," where the background color differed from the rest of the site. I tried setting a color for the `body` in my base CSS file, but that didn’t fix it. 
+While designing my pages—especially the blog overview page—I noticed an issue: everything below the last box element would disappear into a "void", where the background color differed from the rest of the site. I tried setting a color for the `body` in my base CSS file, but that didn’t fix it. 
 
 Not knowing how to "reset" the site, I thought testing it on a different browser might help. So, I installed Firefox and loaded my site there.
 
