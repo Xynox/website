@@ -103,3 +103,17 @@
     background-color: rgb(185, 185, 185);
     color: black;
 }
+
+.popupBody{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1fr;
+    row-gap: 15px;
+}
+
+.popupBodyItem{
+    vertical-align: middle;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
