@@ -1,0 +1,69 @@
+---
+layout: default
+title: Joel Wittke - Contact
+---
+<div class="contactTitle">
+    <p><strong>Contact</strong></p>
+</div>
+
+<div class="contactDescr">
+    <p>You want to get in touch with me? Here are my mostly used socials:</p>
+</div>
+
+<div class="icon_grid">
+
+    <a href="https://www.github.com/Xynox" target="_blank" class="logo1 logo"><img src="{{ '/img/github-mark-white.svg' | relative_url }}" alt="Github"></a>
+    <a href="https://instagram.com/official.xynox" target="_blank" class="logo2 logo"><img src="{{ '/img/Instagram_Glyph_White.svg' | relative_url }}" alt="Instagram"></a>
+    <a href="https://x.com/daXynox" target="_blank" class="logo3 logo"><img src="{{ '/img/x_logo.svg' | relative_url }}" alt="X"></a>
+    <a href="mailto:el.xynox@gmail.com" target="_blank" class="logo4 logo"><img src="{{ '/img/email-9-svgrepo-com.svg' | relative_url }}" alt="Email"></a>
+
+</div>
+
+<div class="contactMore">
+    <button class="contactMoreLink">All other aliases</button>
+</div>
+
+<div class="contactPopup">
+
+    <div class="popupContent">
+        <div class="popupHeader">
+            <span class="popupClose griditem1">&times;</span>
+            <h2 class="item2 griditem2">Other socials</h2>
+        </div>
+        <div class="popupBody">
+            <div class="popupBodyItem">Reddit: <a href="https://www.reddit.com/u/daXynox">daXynox</a></div>
+            <div class="popupBodyItem">LinkedIn: <a href="https://de.linkedin.com/in/joel-wittke-687008272">Joel Wittke</a></div>
+            <div class="popupBodyItem">lichess: <a href="https://lichess.org/@/zXynox">zXynox</a></div>
+            <div class="popupBodyItem">YouTube: <a href="https://www.youtube.com/@zXynox">zXynox</a></div>
+            <div class="popupBodyItem">Steam: <a href="https://steamcommunity.com/id/zxynox/">zXynox</a></div>
+            <div class="popupBodyItem">Twitch: <a href="https://www.twitch.tv/zxynox/">zXynox</a></div>
+            <div class="popupBodyItem">RiotGames: zXynox#9674</div>
+            <div class="popupBodyItem">League of Legends: zXynox</div>
+            <div class="popupBodyItem">EpicGames: leXynox</div>
+            <div class="popupBodyItem">Battle.net: Xynox#21791</div>
+            <div class="popupBodyItem">Xbox Live: zXynox</div>
+            <div class="popupBodyItem">Warframe: zXynox#296</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var popup = document.getElementsByClassName("contactPopup")[0];
+    var link = document.getElementsByClassName("contactMoreLink")[0];
+    var popupClose = document.getElementsByClassName("popupClose")[0];
+    
+    link.onclick = function() {
+        popup.style.display = "block";
+    }
+    
+    popupClose.onclick = function() {
+        popup.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == popup){
+            popup.style.display = "none";
+        }
+    }
+</script>
