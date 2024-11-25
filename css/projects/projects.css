@@ -56,3 +56,11 @@
     height: 256px;
     width: 265px;
 }
+
+.project-explanation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    margin-top: 2%;
+}
