@@ -1,0 +1,16 @@
+---
+layout: default
+title: Joel Wittke - Tags
+---
+
+<div>
+    <p><strong>All blogs with tag {{ page.tag }}</strong></p>
+</div>
+
+<ul>
+    {% for post in site.tags[page.tag] %}
+      <li>
+        {{ post.date | date: "%B %d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+</ul>
