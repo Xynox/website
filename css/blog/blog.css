@@ -16,11 +16,9 @@ h2 a:visited{
 
 .titleBlog{
     display: flex;
-    text-align: center;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    font-size: 48pt;
+    font-size: 32pt;
+    font-weight: bold;
 }
 
 .blogExplanation{
