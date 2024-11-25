@@ -2,6 +2,7 @@
 layout: post
 title: "Providing Cross-Browser Compatibility to My Website"
 author: "Joel Wittke"
+tag: "website"
 ---
 
 In this post, I'll share how I solved various issues that arose when viewing my website across different browsers.

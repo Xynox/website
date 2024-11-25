@@ -1,0 +1,19 @@
+---
+layout: default
+title: Joel Wittke - Tags
+---
+
+<div>
+    <p style="display: flex;
+    justify-content: center;
+    font-size: 32pt;
+    font-weight: bold;"><strong>All blogs with tag "{{ page.tag }}"</strong></p>
+</div>
+
+<ul class="taglist-ul">
+    {% for post in site.tags[page.tag] %}
+      <li>
+        <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%B %d, %Y" }})
+      </li>
+    {% endfor %}
+</ul>

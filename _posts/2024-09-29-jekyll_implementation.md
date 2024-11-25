@@ -2,6 +2,7 @@
 layout: post
 title: "Implementation of Jekyll into my Website"
 author: "Joel Wittke"
+tag: "website"
 ---
 
 In this post, I'll share how I solved issues when implementing Jekyll on my website, specifically around handling relative file paths and hosting on Github Pages (GHP).
